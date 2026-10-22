@@ -1,0 +1,63 @@
+plugins {
+    id 'idea'
+    id 'java-library'
+    id 'maven-publish'
+    alias libs.plugins.modDevGradle
+    alias libs.plugins.spotless
+}
+
+configurations {
+    runtimeClasspath.extendsFrom(localRuntime)
+}
+
+sourceSets {
+    main.resources {
+        srcDir 'src/generated/resources'
+    }
+    client {
+        compileClasspath += main.output
+        runtimeClasspath += main.output + main.runtimeClasspath
+    }
+}
+
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+apply from: "$rootDir/gradle/scripts/moddevgradle.gradle"
+apply from: "$rootDir/gradle/scripts/repositories.gradle"
+apply from: "$rootDir/gradle/scripts/spotless.gradle"
+apply from: "$rootDir/dependencies.gradle"
+
+group = 'org.teus'
+
+
+var replaceResources = tasks.register('replaceResources', ProcessResources) {
+    var properties = [
+            "mod_license": mod_license,
+            "mod_id": mod_id,
+            "mod_version": mod_version,
+            "mod_name": mod_name,
+            "mod_authors": mod_author,
+            "mod_description": "",
+            "forge_version": libs.versions.forge.get().split("\\.")[0],
+            "loader_version_range": "[47,)",
+            "forge_version_range": "["+libs.versions.forge.get()+",)",
+            "minecraft_version": minecraft_version,
+            "minecraft_version_range":"["+minecraft_version+",1.21)",
+            "tinkers_version": forge.versions.tinkers.get(),
+            "mantle_version": forge.versions.mantle.get(),
+    ]
+    inputs.properties(properties)
+    expand properties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+
+sourceSets.main.resources.srcDir replaceResources
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}

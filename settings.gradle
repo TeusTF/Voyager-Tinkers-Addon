@@ -1,0 +1,17 @@
+pluginManagement {
+
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+    versionCatalogs {
+        forge {
+            from(files("gradle/forge.versions.toml"))
+        }
+    }
+}
+
+
+rootProject.name = 'VoyagerTcon'

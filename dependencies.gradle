@@ -1,0 +1,7 @@
+dependencies {
+
+    modRuntimeOnly forge.bundles.jei
+    modRuntimeOnly forge.emi
+    modImplementation forge.bundles.tinkers
+
+}

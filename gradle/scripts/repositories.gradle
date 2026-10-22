@@ -1,0 +1,43 @@
+repositories {
+    flatDir{
+        dir "libs"
+    }
+    mavenLocal()
+    mavenCentral()
+
+
+    maven { // JEI mirror, AE2
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+    maven {
+        // Patchouli, JEI
+        name = "BlameJared"
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        // EMI
+        name = "Sleeping Town"
+        url = "https://repo.sleeping.town/"
+    }
+
+
+    maven {
+        //Tinkers+Mantle
+        name 'DVS1 Maven FS'
+        url 'https://dvs1.progwml6.com/files/maven'
+    }
+
+    maven {
+        //Modrinth Maven
+        url = "https://api.modrinth.com/maven"
+    }
+
+    maven {
+        // Curse Forge Maven
+        url "https://cursemaven.com/"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
