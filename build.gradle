@@ -43,7 +43,7 @@ var replaceResources = tasks.register('replaceResources', ProcessResources) {
             "loader_version_range": "[47,)",
             "forge_version_range": "["+libs.versions.forge.get()+",)",
             "minecraft_version": minecraft_version,
-            "minecraft_version_range":"["+minecraft_version+",1.21)",
+            "minecraft_version_range":"["+minecraft_version+",1.22)",
             "tinkers_version": forge.versions.tinkers.get(),
             "mantle_version": forge.versions.mantle.get(),
     ]
