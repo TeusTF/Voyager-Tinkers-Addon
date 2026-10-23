@@ -24,8 +24,8 @@ repositories {
 
     maven {
         //Tinkers+Mantle
-        name 'DVS1 Maven FS'
-        url 'https://dvs1.progwml6.com/files/maven'
+        name = 'DVS1 Maven FS'
+        url = 'https://dvs1.progwml6.com/files/maven'
     }
 
     maven {
@@ -35,7 +35,7 @@ repositories {
 
     maven {
         // Curse Forge Maven
-        url "https://cursemaven.com/"
+        url = "https://cursemaven.com/"
         content {
             includeGroup "curse.maven"
         }

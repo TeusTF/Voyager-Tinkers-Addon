@@ -79,3 +79,17 @@ mandatory=true
 versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="tconstruct"
+mandatory=true
+versionRange="${tconstruct_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="mantle"
+mandatory=true
+versionRange="${mantle_version_range}"
+ordering="NONE"
+side="BOTH"

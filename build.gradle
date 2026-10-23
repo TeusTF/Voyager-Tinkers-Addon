@@ -4,11 +4,19 @@ plugins {
     id 'maven-publish'
     alias libs.plugins.modDevGradle
     alias libs.plugins.spotless
+    alias libs.plugins.lombok
 }
 
+//configurations {
+//    runtimeClasspath.extendsFrom(localRuntime)
+//}
+
 configurations {
-    runtimeClasspath.extendsFrom(localRuntime)
+    clientRunTimeOnly.canBeResolved = false
+    clientRunTimeOnly.extendsFrom clientLocalRuntime
 }
+
+base { archivesName = archives_base_name }
 
 sourceSets {
     main.resources {
@@ -28,7 +36,7 @@ apply from: "$rootDir/gradle/scripts/repositories.gradle"
 apply from: "$rootDir/gradle/scripts/spotless.gradle"
 apply from: "$rootDir/dependencies.gradle"
 
-group = 'org.teus'
+group = 'net.jzells.voyagertcon'
 
 
 var replaceResources = tasks.register('replaceResources', ProcessResources) {
@@ -44,8 +52,8 @@ var replaceResources = tasks.register('replaceResources', ProcessResources) {
             "forge_version_range": "["+libs.versions.forge.get()+",)",
             "minecraft_version": minecraft_version,
             "minecraft_version_range":"["+minecraft_version+",1.21)",
-            "tinkers_version": forge.versions.tinkers.get(),
-            "mantle_version": forge.versions.mantle.get(),
+            "tconstruct_version_range": "["+forge.versions.tinkers.get().split("-")[1]+",)",
+            "mantle_version_range": "["+forge.versions.mantle.get().split("-")[1]+",)",
     ]
     inputs.properties(properties)
     expand properties
