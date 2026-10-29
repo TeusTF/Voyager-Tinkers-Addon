@@ -45,6 +45,15 @@
       }
     },
     {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "voyagertcon:bolt_shooter"
+        }
+      ]
+    },
+    {
       "type": "tconstruct:modifier_slots",
       "slots": {
         "abilities": 1,

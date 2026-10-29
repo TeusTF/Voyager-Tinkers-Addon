@@ -20,6 +20,7 @@ public class VoyagerToolModelProvider extends AbstractToolItemModelProvider {
     protected void addModels() throws IOException {
         JsonObject toolBlocking = readJson(VoyagerTCon.ofResourceLocation("base/tool_blocking"));
         bow(VoyagerTools.heavy_crossbow, toolBlocking, new CrossbowAmmo(new Vec2(-1, -1), true, false), "bowstring");
+
     }
 
     @Override

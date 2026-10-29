@@ -25,7 +25,8 @@
       "type": "tconstruct:base_stats",
       "stats": {
         "tconstruct:attack_damage": 0.0,
-        "tconstruct:velocity": 0.0
+        "tconstruct:durability": 32.0,
+        "tconstruct:velocity": 1.0
       }
     },
     {

@@ -2,14 +2,15 @@ package net.jzells.voyagertcon.tools.data;
 
 import net.jzells.voyagertcon.VoyagerTCon;
 import net.jzells.voyagertcon.tools.VoyagerToolDefinitions;
+import net.jzells.voyagertcon.tools.modules.BoltModule;
 import net.minecraft.data.PackOutput;
 import slimeknights.tconstruct.library.data.tinkering.AbstractToolDefinitionDataProvider;
 import slimeknights.tconstruct.library.materials.RandomMaterial;
 import slimeknights.tconstruct.library.tools.definition.module.build.MultiplyStatsModule;
 import slimeknights.tconstruct.library.tools.definition.module.build.SetStatsModule;
+import slimeknights.tconstruct.library.tools.definition.module.build.ToolTraitsModule;
 import slimeknights.tconstruct.library.tools.definition.module.display.FixedMaterialToolName;
 import slimeknights.tconstruct.library.tools.definition.module.material.DefaultMaterialsModule;
-import slimeknights.tconstruct.library.tools.definition.module.material.MaterialStatsModule;
 import slimeknights.tconstruct.library.tools.definition.module.material.PartStatsModule;
 import slimeknights.tconstruct.library.tools.nbt.MultiplierNBT;
 import slimeknights.tconstruct.library.tools.nbt.StatsNBT;
@@ -43,6 +44,7 @@ public class VoyagerToolDefinitionDataProvider extends AbstractToolDefinitionDat
                         .set(ToolStats.ATTACK_SPEED, 1.0f).build()))
                 .module(new MultiplyStatsModule(MultiplierNBT.builder()
                         .set(ToolStats.DURABILITY, 2f).build()))
+                .module(ToolTraitsModule.builder().trait(VoyagerModifierIds.bolt_shooter).build())
                 .largeToolStartingSlots()
                 // faster tool name logic
                 .module(FixedMaterialToolName.FIRST);
@@ -55,7 +57,8 @@ public class VoyagerToolDefinitionDataProvider extends AbstractToolDefinitionDat
                 .module(defaultTwoParts)
                 .module(new SetStatsModule(StatsNBT.builder()
                         .set(ToolStats.ATTACK_DAMAGE,0f)
-                        .set(ToolStats.VELOCITY,0f)
+                        .set(ToolStats.VELOCITY,1f)
+                        .set(ToolStats.DURABILITY,32f)
                         .build()))
                 .module(new MultiplyStatsModule(MultiplierNBT.builder()
                         .set(ToolStats.DURABILITY,2f)

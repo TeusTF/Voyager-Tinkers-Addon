@@ -1,5 +1,6 @@
 package net.jzells.voyagertcon;
 
+import net.jzells.voyagertcon.tools.VoyagerModifiers;
 import net.jzells.voyagertcon.tools.VoyagerTools;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -29,6 +30,7 @@ public class VoyagerTCon {
         event.addListener(this::clientSetup);
 
         event.register(new VoyagerTools());
+        event.register(new VoyagerModifiers(event));
         
         VoyagerTools.register(event);
 
