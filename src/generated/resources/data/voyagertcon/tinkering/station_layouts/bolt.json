@@ -1,0 +1,28 @@
+{
+  "icon": {
+    "item": "voyagertcon:bolt",
+    "nbt": "{tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "input_slots": [
+    {
+      "filter": {
+        "item": "tconstruct:arrow_head"
+      },
+      "icon": "tconstruct:arrow_head",
+      "translation_key": "item.tconstruct.arrow_head",
+      "x": 40,
+      "y": 30
+    },
+    {
+      "filter": {
+        "item": "tconstruct:tough_handle"
+      },
+      "icon": "tconstruct:tough_handle",
+      "translation_key": "item.tconstruct.tough_handle",
+      "x": 40,
+      "y": 25
+    }
+  ],
+  "sortIndex": 7,
+  "translation_key": "item.voyagertcon.bolt"
+}

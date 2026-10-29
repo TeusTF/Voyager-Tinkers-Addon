@@ -12,6 +12,7 @@ import net.minecraftforge.fml.javafmlmod.FMLModContainer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import slimeknights.tconstruct.library.client.model.TinkerItemProperties;
 
 @Mod(VoyagerTCon.MOD)
 public class VoyagerTCon {
@@ -38,6 +39,9 @@ public class VoyagerTCon {
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
+        event.enqueueWork(() ->{
+            TinkerItemProperties.registerCrossbowProperties(VoyagerTools.heavy_crossbow);
+        });
     }
 
 

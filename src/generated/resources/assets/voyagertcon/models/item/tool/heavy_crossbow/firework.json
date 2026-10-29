@@ -1,0 +1,38 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "tconstruct:item/base/crossbow",
+  "textures": {
+    "limb_upper": "voyagertcon:item/tool/heavy_crossbow/upper_limb",
+    "limb_lower": "voyagertcon:item/tool/heavy_crossbow/lower_limb",
+    "body": "tconstruct:item/tool/crossbow/body",
+    "bowstring": "tconstruct:item/tool/crossbow/bowstring_3",
+    "ammo": "voyagertcon:item/tool/heavy_crossbow/firework"
+  },
+  "modifier_maps": [
+    "tconstruct:crossbow"
+  ],
+  "modifier_roots": [
+    "tconstruct:item/tool/crossbow/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "limb_upper",
+      "index": 0
+    },
+    {
+      "name": "limb_lower",
+      "index": 1
+    },
+    {
+      "name": "body",
+      "index": 2
+    },
+    {
+      "name": "bowstring",
+      "index": 3
+    },
+    {
+      "name": "ammo"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "icon": {
+    "item": "voyagertcon:heavy_crossbow",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "input_slots": [
+    {
+      "filter": {
+        "item": "tconstruct:bow_limb"
+      },
+      "icon": "tconstruct:bow_limb",
+      "translation_key": "item.tconstruct.bow_limb",
+      "x": 44,
+      "y": 29
+    },
+    {
+      "filter": {
+        "item": "tconstruct:bow_limb"
+      },
+      "icon": "tconstruct:bow_limb",
+      "translation_key": "item.tconstruct.bow_limb",
+      "x": 42,
+      "y": 31
+    },
+    {
+      "filter": {
+        "item": "tconstruct:bowstring"
+      },
+      "icon": "tconstruct:bowstring",
+      "translation_key": "item.tconstruct.bowstring",
+      "x": 40,
+      "y": 35
+    },
+    {
+      "filter": {
+        "item": "tconstruct:bow_grip"
+      },
+      "icon": "tconstruct:bow_grip",
+      "translation_key": "item.tconstruct.bow_grip",
+      "x": 35,
+      "y": 20
+    }
+  ],
+  "sortIndex": 8,
+  "translation_key": "item.voyagertcon.heavy_crossbow"
+}
