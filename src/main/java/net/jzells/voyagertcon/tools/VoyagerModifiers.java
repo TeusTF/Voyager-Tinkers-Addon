@@ -18,7 +18,6 @@ public class VoyagerModifiers {
 
     private static final ModifierDeferredRegister MODIFIERS = ModifierDeferredRegister.create(VoyagerTCon.MOD);
 
-
     public VoyagerModifiers(IEventBus event) {
         MODIFIERS.register(event);
     }

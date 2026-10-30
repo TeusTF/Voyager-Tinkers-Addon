@@ -56,7 +56,7 @@ public enum BoltModule implements BowAmmoModifierHook, ModifierModule, DisplayNa
             playerBolt.hurtAndBreak(needed, shooter, e -> e.broadcastBreakEvent(EquipmentSlot.MAINHAND));
             return;
         }
-        //If somehow a tool firing with this modifier isn't only shooting bolts...
+        // If somehow a tool firing with this modifier isn't only shooting bolts...
         BowAmmoModifierHook.super.shrinkAmmo(tool, modifier, shooter, ammo, needed);
     }
 
@@ -73,9 +73,9 @@ public enum BoltModule implements BowAmmoModifierHook, ModifierModule, DisplayNa
             ItemStack itemstack = inventory.getItem(i);
             if (itemstack.getItem() instanceof ModifiableBoltItem bs) {
                 if (ToolStack.from(itemstack).isBroken()) return ItemStack.EMPTY;
-                //Yes, I'm passing the durability as the count. No, I don't know if there's a better way
+                // Yes, I'm passing the durability as the count. No, I don't know if there's a better way
                 ItemStack bolt = itemstack.copyWithCount(itemstack.getMaxDamage() - itemstack.getDamageValue());
-                bolt.getOrCreateTag().putInt(BOLT, i); //Needed for modifying original stack in shrinkAmmo(...)
+                bolt.getOrCreateTag().putInt(BOLT, i); // Needed for modifying original stack in shrinkAmmo(...)
                 return bolt;
             }
         }

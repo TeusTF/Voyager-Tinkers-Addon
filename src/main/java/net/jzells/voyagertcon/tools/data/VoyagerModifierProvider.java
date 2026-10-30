@@ -4,7 +4,6 @@ import net.jzells.voyagertcon.tools.modules.BoltModule;
 import net.minecraft.data.PackOutput;
 
 import slimeknights.tconstruct.library.data.tinkering.AbstractModifierProvider;
-import slimeknights.tconstruct.library.modifiers.impl.BasicModifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierLevelDisplay;
 
 public class VoyagerModifierProvider extends AbstractModifierProvider {

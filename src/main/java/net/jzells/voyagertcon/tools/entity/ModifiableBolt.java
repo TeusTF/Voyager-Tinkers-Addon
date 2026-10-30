@@ -73,7 +73,7 @@ public class ModifiableBolt extends ModifiableArrow {
                     return true;
                 }
             }
-            return false; //Item not returned, because duplicate stack lol
+            return false; // Item not returned, because duplicate stack lol
         }
     }
 

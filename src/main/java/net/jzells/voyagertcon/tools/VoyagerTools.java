@@ -8,7 +8,6 @@ import net.jzells.voyagertcon.tools.ranged.HeavyCrossbowItem;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraft.locale.Language;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -16,14 +15,12 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-import org.apache.commons.lang3.LocaleUtils;
 import slimeknights.mantle.registration.object.ItemObject;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.common.registration.ItemDeferredRegisterExtension;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
-import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 
 public class VoyagerTools {
@@ -41,7 +38,7 @@ public class VoyagerTools {
     public static final ItemObject<ToolPartItem> bolt_core = ITEMS.register("bolt_core",
             () -> new ToolPartItem(ITEM_PROPS, HeadMaterialStats.ID));
 
-    public static final CastItemObject bolt_core_cast = ITEMS.registerCast(bolt_core,ITEM_PROPS);
+    public static final CastItemObject bolt_core_cast = ITEMS.registerCast(bolt_core, ITEM_PROPS);
 
     public static void register(IEventBus event) {
         ITEMS.register(event);

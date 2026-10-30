@@ -28,11 +28,11 @@ public class VoyagerToolsRecipeProvider extends VoyagerAbstractRecipeProvider
         toolBuilding(writer, VoyagerTools.bolt, folder);
     }
 
-     private void addPartRecipes(Consumer<FinishedRecipe> writer) {
+    private void addPartRecipes(Consumer<FinishedRecipe> writer) {
         String parts = "tools/parts";
         String cast = "smeltery/casts";
-        partRecipes(writer,VoyagerTools.bolt_core,VoyagerTools.bolt_core_cast,2,parts,cast);
-     }
+        partRecipes(writer, VoyagerTools.bolt_core, VoyagerTools.bolt_core_cast, 2, parts, cast);
+    }
 
     @Override
     public String getName() {
