@@ -19,14 +19,18 @@ import static slimeknights.tconstruct.common.TinkerTags.Items.*;
 
 public class VoyagerItemTagProvider extends ItemTagsProvider {
 
-    public VoyagerItemTagProvider(PackOutput output, CompletableFuture<Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags, ExistingFileHelper existingFileHelper) {
+    public VoyagerItemTagProvider(PackOutput output, CompletableFuture<Provider> lookupProvider,
+                                  CompletableFuture<TagLookup<Block>> blockTags,
+                                  ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTags, VoyagerTCon.MOD, existingFileHelper);
     }
 
     @Override
     protected void addTags(Provider provider) {
-        addToolTags(VoyagerTools.heavy_crossbow, DURABILITY, MULTIPART_TOOL, CROSSBOWS, INTERACTABLE_LEFT, BROAD_RANGED, BONUS_SLOTS, Tags.Items.TOOLS_CROSSBOWS);
-        addToolTags(VoyagerTools.bolt, DURABILITY, MULTIPART_TOOL, AMMO, INTERACTABLE_LEFT, BROAD_RANGED, BONUS_SLOTS, ItemTags.ARROWS);
+        addToolTags(VoyagerTools.heavy_crossbow, DURABILITY, MULTIPART_TOOL, CROSSBOWS, INTERACTABLE_LEFT, BROAD_RANGED,
+                BONUS_SLOTS, Tags.Items.TOOLS_CROSSBOWS);
+        addToolTags(VoyagerTools.bolt, DURABILITY, MULTIPART_TOOL, AMMO, INTERACTABLE_LEFT, BROAD_RANGED, BONUS_SLOTS,
+                ItemTags.ARROWS);
     }
 
     @SafeVarargs

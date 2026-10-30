@@ -16,16 +16,16 @@ public class VoyagerStationSlotLayoutProvider extends AbstractStationSlotLayoutP
     protected void addLayouts() {
         defineModifiable(VoyagerTools.heavy_crossbow)
                 .sortIndex(SORT_RANGED)
-                .addInputItem(TinkerToolParts.bowLimb,44,29)
-                .addInputItem(TinkerToolParts.bowLimb,42,31)
-                .addInputItem(TinkerToolParts.bowstring, 40,35)
-                .addInputItem(TinkerToolParts.bowGrip,35,20)
+                .addInputItem(TinkerToolParts.bowLimb, 44, 29)
+                .addInputItem(TinkerToolParts.bowLimb, 42, 31)
+                .addInputItem(TinkerToolParts.bowGrip, 35, 20)
+                .addInputItem(TinkerToolParts.bowstring, 40, 35)
                 .build();
 
         defineModifiable(VoyagerTools.bolt)
                 .sortIndex(SORT_AMMO)
-                .addInputItem(TinkerToolParts.arrowHead, 40,30)
-                .addInputItem(TinkerToolParts.toughHandle,40, 25)
+                .addInputItem(VoyagerTools.bolt_core, 40, 30)
+                .addInputItem(TinkerToolParts.toughHandle, 40, 25)
                 .build();
     }
 

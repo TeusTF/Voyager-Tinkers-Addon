@@ -1,11 +1,11 @@
 package net.jzells.voyagertcon.tools.data.sprite;
 
 import net.jzells.voyagertcon.VoyagerTCon;
+
 import slimeknights.tconstruct.library.client.data.material.AbstractPartSpriteProvider;
 import slimeknights.tconstruct.tools.stats.StatlessMaterialStats;
 
 public class VoyagerPartSpriteProvider extends AbstractPartSpriteProvider {
-
 
     public VoyagerPartSpriteProvider() {
         super(VoyagerTCon.MOD);

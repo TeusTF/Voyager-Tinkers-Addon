@@ -1,0 +1,12 @@
+{
+  "item.voyagertcon.bolt": "Bolt",
+  "item.voyagertcon.bolt.description": "Bolts are your standard repairable ammo type, however they can only be used correctly on weapons with the Bolt Shooter Modifier",
+  "item.voyagertcon.bolt_core": "Bolt Core",
+  "item.voyagertcon.bolt_core_cast": "Bolt Core Cast",
+  "item.voyagertcon.bolt_core_red_sand_cast": "Bolt Core Red Sand Cast",
+  "item.voyagertcon.bolt_core_sand_cast": "Bolt Core Sand Cast",
+  "item.voyagertcon.heavy_crossbow": "Heavy Crossbow",
+  "modifier.voyagertcon.bolt_shooter": "Bolt Shooter",
+  "modifier.voyagertcon.bolt_shooter.description": "This weapon shoots bolts",
+  "modifier.voyagertcon.bolt_shooter.flavor": "Is that a foot of rebar?"
+}

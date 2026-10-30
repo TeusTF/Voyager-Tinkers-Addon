@@ -6,18 +6,16 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
-
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+
 import org.jetbrains.annotations.Nullable;
 import slimeknights.mantle.client.TooltipKey;
-import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.helper.TooltipBuilder;
-import slimeknights.tconstruct.library.tools.helper.TooltipUtil;
 import slimeknights.tconstruct.library.tools.item.ModifiableArrowItem;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
@@ -40,7 +38,7 @@ public class ModifiableBoltItem extends ModifiableArrowItem {
     @Override
     public AbstractArrow createArrow(Level level, ItemStack stack, LivingEntity shooter) {
         ModifiableBolt bolt = new ModifiableBolt(level, shooter);
-        bolt.onCreate(stack,shooter);
+        bolt.onCreate(stack, shooter);
         return bolt;
     }
 
@@ -81,7 +79,8 @@ public class ModifiableBoltItem extends ModifiableArrowItem {
     }
 
     @Override
-    public List<Component> getStatInformation(IToolStackView tool, @Nullable Player player, List<Component> tooltip, TooltipKey key, TooltipFlag flag) {
+    public List<Component> getStatInformation(IToolStackView tool, @Nullable Player player, List<Component> tooltip,
+                                              TooltipKey key, TooltipFlag flag) {
         TooltipBuilder builder = new TooltipBuilder(tool, tooltip);
         builder.add(ToolStats.PROJECTILE_DAMAGE);
         builder.add(ToolStats.VELOCITY);

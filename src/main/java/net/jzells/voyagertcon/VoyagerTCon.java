@@ -25,27 +25,24 @@ public class VoyagerTCon {
         FMLModContainer container = context.getContainer();
         IEventBus event = context.getModEventBus();
 
-
         event.addListener(this::commonSetup);
         event.addListener(this::clientSetup);
 
         event.register(new VoyagerTools());
         event.register(new VoyagerModifiers(event));
-        
+
         VoyagerTools.register(event);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    public void commonSetup(final FMLCommonSetupEvent event) {
-    }
+    public void commonSetup(final FMLCommonSetupEvent event) {}
 
     private void clientSetup(final FMLClientSetupEvent event) {
-        event.enqueueWork(() ->{
+        event.enqueueWork(() -> {
             TinkerItemProperties.registerCrossbowProperties(VoyagerTools.heavy_crossbow);
         });
     }
-
 
     public static ResourceLocation ofResourceLocation(String name) {
         return ResourceLocation.fromNamespaceAndPath(MOD, name);

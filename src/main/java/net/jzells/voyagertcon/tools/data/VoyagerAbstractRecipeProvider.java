@@ -1,7 +1,5 @@
 package net.jzells.voyagertcon.tools.data;
 
-import com.google.common.collect.Sets;
-import com.google.gson.JsonObject;
 import net.jzells.voyagertcon.VoyagerTCon;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
@@ -9,6 +7,9 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+
+import com.google.common.collect.Sets;
+import com.google.gson.JsonObject;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.mantle.recipe.data.IRecipeHelper;
 
@@ -19,11 +20,12 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public abstract class VoyagerAbstractRecipeProvider implements DataProvider, IConditionBuilder, IRecipeHelper {
+
     protected final PackOutput.PathProvider recipePathProvider;
     protected final PackOutput.PathProvider advancementPathProvider;
 
     public VoyagerAbstractRecipeProvider(PackOutput output) {
-        this.recipePathProvider = output.createPathProvider(PackOutput.Target.DATA_PACK,"recipes");
+        this.recipePathProvider = output.createPathProvider(PackOutput.Target.DATA_PACK, "recipes");
         this.advancementPathProvider = output.createPathProvider(PackOutput.Target.DATA_PACK, "advancements");
     }
 
@@ -50,7 +52,6 @@ public abstract class VoyagerAbstractRecipeProvider implements DataProvider, ICo
     }
 
     protected abstract void buildRecipes(Consumer<FinishedRecipe> writer);
-
 
     /**
      * Called every time a recipe is saved to also save the advancement JSON if it exists.

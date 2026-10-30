@@ -3,7 +3,7 @@
     {
       "type": "tconstruct:part_stats",
       "parts": [
-        "tconstruct:arrow_head",
+        "voyagertcon:bolt_core",
         "tconstruct:tough_handle"
       ],
       "primary_part": 0
@@ -25,7 +25,6 @@
       "type": "tconstruct:base_stats",
       "stats": {
         "tconstruct:attack_damage": 0.0,
-        "tconstruct:durability": 32.0,
         "tconstruct:velocity": 1.0
       }
     },
@@ -41,6 +40,10 @@
         "abilities": 1,
         "upgrades": 3
       }
+    },
+    {
+      "type": "tconstruct:fixed_material_name",
+      "index": 0
     }
   ]
 }

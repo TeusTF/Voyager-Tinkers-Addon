@@ -10,11 +10,14 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.RegisterEvent;
+
 import slimeknights.tconstruct.library.modifiers.modules.ModifierModule;
 import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
 
 public class VoyagerModifiers {
+
     private static final ModifierDeferredRegister MODIFIERS = ModifierDeferredRegister.create(VoyagerTCon.MOD);
+
 
     public VoyagerModifiers(IEventBus event) {
         MODIFIERS.register(event);

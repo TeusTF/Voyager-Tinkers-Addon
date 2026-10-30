@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:part_builder",
+  "cost": 2,
+  "pattern": "voyagertcon:bolt_core",
+  "pattern_item": [
+    {
+      "tag": "tconstruct:patterns/default"
+    },
+    {
+      "item": "voyagertcon:bolt_core_cast"
+    }
+  ],
+  "result": {
+    "item": "voyagertcon:bolt_core"
+  }
+}
