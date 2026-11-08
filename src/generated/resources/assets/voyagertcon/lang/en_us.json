@@ -6,7 +6,9 @@
   "item.voyagertcon.bolt_core_red_sand_cast": "Bolt Core Red Sand Cast",
   "item.voyagertcon.bolt_core_sand_cast": "Bolt Core Sand Cast",
   "item.voyagertcon.heavy_crossbow": "Heavy Crossbow",
+  "item.voyagertcon.heavy_crossbow.description": "A Crossbow, but heavier. Higher bolt velocity, and allows the use of reusable bolts",
   "modifier.voyagertcon.bolt_shooter": "Bolt Shooter",
   "modifier.voyagertcon.bolt_shooter.description": "This weapon shoots bolts",
-  "modifier.voyagertcon.bolt_shooter.flavor": "Is that a foot of rebar?"
+  "modifier.voyagertcon.bolt_shooter.flavor": "Is that a foot of rebar?",
+  "pattern.voyagertcon.bolt_core": "Bolt Core"
 }

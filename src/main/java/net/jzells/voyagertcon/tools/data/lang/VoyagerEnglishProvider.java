@@ -12,7 +12,7 @@ public class VoyagerEnglishProvider extends VoyagerAbstractLangValueProvider {
 
     @Override
     protected void addTranslations() {
-        addItemObject(VoyagerTools.heavy_crossbow, "Heavy Crossbow");
+        addToolObject(VoyagerTools.heavy_crossbow, "Heavy Crossbow","A Crossbow, but heavier. Higher bolt velocity, and allows the use of reusable bolts");
         addToolObject(VoyagerTools.bolt, "Bolt", "Bolts are your standard repairable ammo type," +
                 " however they can only be used correctly on weapons with the Bolt Shooter Modifier");
 
@@ -21,5 +21,6 @@ public class VoyagerEnglishProvider extends VoyagerAbstractLangValueProvider {
 
         addModifier(VoyagerModifierIds.bolt_shooter, "Bolt Shooter", "This weapon shoots bolts",
                 "Is that a foot of rebar?");
+        add(VoyagerTools.bolt_core.getId().toLanguageKey("pattern"),"Bolt Core");
     }
 }

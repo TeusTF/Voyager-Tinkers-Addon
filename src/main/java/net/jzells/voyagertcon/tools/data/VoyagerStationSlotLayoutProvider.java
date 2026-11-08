@@ -24,7 +24,7 @@ public class VoyagerStationSlotLayoutProvider extends AbstractStationSlotLayoutP
 
         defineModifiable(VoyagerTools.bolt)
                 .sortIndex(SORT_AMMO)
-                .addInputItem(VoyagerTools.bolt_core, 50, 30)
+                .addInputItem(VoyagerTools.bolt_core, 40, 30)
                 .addInputItem(TinkerToolParts.toughHandle, 40, 50)
                 .build();
     }
