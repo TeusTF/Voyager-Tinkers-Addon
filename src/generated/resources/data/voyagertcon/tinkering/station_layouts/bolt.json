@@ -10,7 +10,7 @@
       },
       "icon": "voyagertcon:bolt_core",
       "translation_key": "item.voyagertcon.bolt_core",
-      "x": 40,
+      "x": 50,
       "y": 30
     },
     {
@@ -20,7 +20,7 @@
       "icon": "tconstruct:tough_handle",
       "translation_key": "item.tconstruct.tough_handle",
       "x": 40,
-      "y": 25
+      "y": 50
     }
   ],
   "sortIndex": 7,

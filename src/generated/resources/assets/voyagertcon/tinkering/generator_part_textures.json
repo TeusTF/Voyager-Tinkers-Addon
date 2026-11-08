@@ -1,0 +1,9 @@
+{
+  "parts": [
+    {
+      "path": "voyagertcon:item/tool/parts/bolt_core",
+      "stat_type": "tconstruct:head"
+    }
+  ],
+  "replace": false
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "voyagertcon:item/sand_cast/bolt_core"
+  }
+}

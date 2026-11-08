@@ -5,6 +5,7 @@ import net.jzells.voyagertcon.VoyagerTCon;
 import slimeknights.tconstruct.library.client.data.material.AbstractPartSpriteProvider;
 import slimeknights.tconstruct.tools.stats.StatlessMaterialStats;
 
+//WHAT
 public class VoyagerPartSpriteProvider extends AbstractPartSpriteProvider {
 
     public VoyagerPartSpriteProvider() {
@@ -18,11 +19,13 @@ public class VoyagerPartSpriteProvider extends AbstractPartSpriteProvider {
 
     @Override
     protected void addAllSpites() {
-        buildTool("heavy_crossbow")
-                .addLimb("limb_top").addLimb("limb_bottom")
-                .addBreakableBowstring("bowstring").addGrip("body");
-        buildTool("bolt")
-                .addArrowHead("arrow_head")
-                .addPart("arrow_shaft", StatlessMaterialStats.ARROW_SHAFT);
+//        buildTool("heavy_crossbow")
+//                .addLimb("limb_top").addLimb("limb_bottom")
+//                .addBreakableBowstring("bowstring").addGrip("body");
+//        buildTool("bolt")
+//                .addArrowHead("arrow_head")
+//                .addPart("arrow_shaft", StatlessMaterialStats.ARROW_SHAFT);
+        addHead("bolt_core");
+
     }
 }

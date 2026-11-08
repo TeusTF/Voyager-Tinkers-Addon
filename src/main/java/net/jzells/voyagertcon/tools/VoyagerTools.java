@@ -3,6 +3,8 @@ package net.jzells.voyagertcon.tools;
 import net.jzells.voyagertcon.VoyagerTCon;
 import net.jzells.voyagertcon.tools.data.*;
 import net.jzells.voyagertcon.tools.data.lang.VoyagerEnglishProvider;
+import net.jzells.voyagertcon.tools.data.model.VoyagerItemModelProvider;
+import net.jzells.voyagertcon.tools.data.sprite.VoyagerPartSpriteProvider;
 import net.jzells.voyagertcon.tools.data.tags.VoyagerItemTagProvider;
 import net.jzells.voyagertcon.tools.ranged.HeavyCrossbowItem;
 import net.minecraft.core.HolderLookup.Provider;
@@ -18,7 +20,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import slimeknights.mantle.registration.object.ItemObject;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.common.registration.ItemDeferredRegisterExtension;
+import slimeknights.tconstruct.library.client.data.material.GeneratorPartTextureJsonGenerator;
+import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
+import slimeknights.tconstruct.tools.data.material.MaterialRenderInfoProvider;
+import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
 import java.util.concurrent.CompletableFuture;
@@ -33,7 +39,7 @@ public class VoyagerTools {
     public static final ItemObject<HeavyCrossbowItem> heavy_crossbow = ITEMS.register("heavy_crossbow",
             () -> new HeavyCrossbowItem(UNSTACKABLE_PROPS, VoyagerToolDefinitions.HEAVY_CROSSBOW));
     public static final ItemObject<ModifiableBoltItem> bolt = ITEMS.register("bolt",
-            () -> new ModifiableBoltItem(ITEM_PROPS, VoyagerToolDefinitions.BOLT));
+            () -> new ModifiableBoltItem(UNSTACKABLE_PROPS, VoyagerToolDefinitions.BOLT));
 
     public static final ItemObject<ToolPartItem> bolt_core = ITEMS.register("bolt_core",
             () -> new ToolPartItem(ITEM_PROPS, HeadMaterialStats.ID));
@@ -76,5 +82,11 @@ public class VoyagerTools {
         generator.addProvider(server, blockTags);
         generator.addProvider(server,
                 new VoyagerItemTagProvider(packOutput, lookupProvider, blockTags.contentsGetter(), file));
+        var partSprite = new VoyagerPartSpriteProvider();
+        var materialSprites = new TinkerMaterialSpriteProvider();
+//        generator.addProvider(client, new MaterialRenderInfoProvider(packOutput,materialSprites,file));
+        generator.addProvider(client, new GeneratorPartTextureJsonGenerator(packOutput,VoyagerTCon.MOD,partSprite));
+        generator.addProvider(client, new MaterialPartTextureGenerator(packOutput,file,partSprite,materialSprites));
+        generator.addProvider(client, new VoyagerItemModelProvider(packOutput,file));
     }
 }
