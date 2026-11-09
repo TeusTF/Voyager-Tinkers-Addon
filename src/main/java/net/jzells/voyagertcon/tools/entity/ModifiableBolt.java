@@ -15,6 +15,7 @@ import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.tools.item.IModifiable;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
+import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import slimeknights.tconstruct.tools.entity.ModifiableArrow;
 
 public class ModifiableBolt extends ModifiableArrow {
@@ -55,6 +56,15 @@ public class ModifiableBolt extends ModifiableArrow {
             case CREATIVE_ONLY -> player.getAbilities().instabuild;
             default -> false;
         };
+    }
+
+    @Override
+    public double getBaseDamage() {
+        if (actualStack.getItem() instanceof IModifiable) {
+            // Because of jank, 2 is from super.
+            return 2 + ToolStack.from(actualStack).getStats().get(ToolStats.ATTACK_DAMAGE) / 4;
+        }
+        return super.getBaseDamage();
     }
 
     private boolean tryUpdateStack(Player player) {

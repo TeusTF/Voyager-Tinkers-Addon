@@ -19,6 +19,7 @@ import slimeknights.tconstruct.library.tools.helper.TooltipBuilder;
 import slimeknights.tconstruct.library.tools.item.ModifiableArrowItem;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
+import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
 import java.util.List;
@@ -82,7 +83,9 @@ public class ModifiableBoltItem extends ModifiableArrowItem {
     public List<Component> getStatInformation(IToolStackView tool, @Nullable Player player, List<Component> tooltip,
                                               TooltipKey key, TooltipFlag flag) {
         TooltipBuilder builder = new TooltipBuilder(tool, tooltip);
-        builder.add(ToolStats.PROJECTILE_DAMAGE);
+        FloatToolStat attack = ToolStats.ATTACK_DAMAGE;
+        // HOLY JANK
+        builder.add(ToolStats.PROJECTILE_DAMAGE.formatValue(tool.getStats().get(attack) / 4));
         builder.add(ToolStats.VELOCITY);
         builder.add(ToolStats.ACCURACY);
         builder.addAllFreeSlots();
