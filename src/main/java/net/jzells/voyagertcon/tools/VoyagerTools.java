@@ -23,7 +23,6 @@ import slimeknights.tconstruct.common.registration.ItemDeferredRegisterExtension
 import slimeknights.tconstruct.library.client.data.material.GeneratorPartTextureJsonGenerator;
 import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
-import slimeknights.tconstruct.tools.data.material.MaterialRenderInfoProvider;
 import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
@@ -84,9 +83,9 @@ public class VoyagerTools {
                 new VoyagerItemTagProvider(packOutput, lookupProvider, blockTags.contentsGetter(), file));
         var partSprite = new VoyagerPartSpriteProvider();
         var materialSprites = new TinkerMaterialSpriteProvider();
-//        generator.addProvider(client, new MaterialRenderInfoProvider(packOutput,materialSprites,file));
-        generator.addProvider(client, new GeneratorPartTextureJsonGenerator(packOutput,VoyagerTCon.MOD,partSprite));
-        generator.addProvider(client, new MaterialPartTextureGenerator(packOutput,file,partSprite,materialSprites));
-        generator.addProvider(client, new VoyagerItemModelProvider(packOutput,file));
+        // generator.addProvider(client, new MaterialRenderInfoProvider(packOutput,materialSprites,file));
+        generator.addProvider(client, new GeneratorPartTextureJsonGenerator(packOutput, VoyagerTCon.MOD, partSprite));
+        generator.addProvider(client, new MaterialPartTextureGenerator(packOutput, file, partSprite, materialSprites));
+        generator.addProvider(client, new VoyagerItemModelProvider(packOutput, file));
     }
 }
